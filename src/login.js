@@ -13,10 +13,24 @@ class Login extends Component {
             authenticated: false,
         }
     }
+
+    componentWillMount() {
+        fetch("https://github.com/login/oauth/authorize?client_id=e6b179a6fb2c1fbdea3d")
+            .then((response) => {
+                console.log(response);
+            })
+    }
+
     render() {
         return (
             <div className="App">
+                <p className="title"> Forge </p>
+                <p className="intro title"> Simplifying open source, through open source </p>
             </div>
+
+
+
+
         );
     }
 }

@@ -14,10 +14,18 @@ class App extends Component {
     }
   }
   render() {
-    return (
-      <div className="App">
-      </div>
-    );
+    if (!this.state.authenticated) {
+      return (
+        <Login />
+      )
+    }
+    else {
+      return (
+        <div>
+          <p> Foundry </p>
+        </div>
+      );
+    }
   }
 }
 

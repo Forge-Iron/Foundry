@@ -1,3 +1,39 @@
-body {
-  background-color: #D39685;
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #F8F8F8;
+
+}
+
+.title-cont {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.title {
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 20px;
+  font-size: 50px;
+  color: #EF8456;
+  letter-spacing: 1px;
+  font-family: 'Modak', cursive;
+
+}
+.intro {
+  font-size: 30px;
+  margin-bottom: 0px;
+  font-weight: 300;
+  color: #303030;
+  font-family: 'Lato', sans-serif;
+}
+.login-card {
+  box-shadow: 1px 1px 20px;
+  grid-column-start: 2;
+  background-color: white;
+  grid-column-end: 4;
+  margin: 30px;
+  border-radius: 2px;
 }
