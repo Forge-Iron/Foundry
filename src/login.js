@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './images/boostfire.png';
 import './App.css';
 
 
@@ -24,8 +24,14 @@ class Login extends Component {
     render() {
         return (
             <div className="App">
-                <p className="title"> Forge </p>
-                <p className="intro title"> Simplifying open source, through open source </p>
+
+                <p className="title"> Foundry </p>
+                <img src={logo} className="logo" />
+                <p className="intro title"> Open Source, Simplified. </p>
+                <p className="paragraph">
+                    Foundry was made to make it easier for others to get into contributing to a project. As a project owner, all you need to do is connect your
+                    repository, and Foundry will do the rest.
+                </p>
             </div>
 
 
