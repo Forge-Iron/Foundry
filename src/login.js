@@ -32,6 +32,8 @@ class Login extends Component {
                     Foundry was made to make it easier for others to get into contributing to a project. As a project owner, all you need to do is connect your
                     repository, and Foundry will do the rest.
                 </p>
+
+                <a href="#" className="login" > Log in with Github </a>
             </div>
 
 
