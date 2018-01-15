@@ -6,6 +6,9 @@
 
 }
 
+a:link {
+  text-decoration: none;
+}
 .horiz {
   display: flex;
   flex-direction: row;

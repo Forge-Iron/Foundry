@@ -17,7 +17,7 @@ export default class IssueCard extends Component {
     render() {
 
         var Trianglify = require('trianglify');
-        var pattern = Trianglify({ width: 1000, height: 900 })
+        var pattern = Trianglify({ cell_size: 30, width: 1000, height: 900 })
 
 
         return (
