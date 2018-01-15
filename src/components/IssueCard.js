@@ -17,14 +17,15 @@ export default class IssueCard extends Component {
     render() {
 
         var Trianglify = require('trianglify');
-        var pattern = Trianglify({ width: 900, height: 900 })
+        var pattern = Trianglify({ width: 1000, height: 900 })
 
 
         return (
             <div>
 
                 <img className="icon-image" src={pattern.png()} />
-                <p className="icon-text" >{this.props.name} - {this.props.description}</p>
+                <p className="icon-text" >{this.props.name} </p>
+
 
             </div>
         )

@@ -5,6 +5,9 @@
   background-color: #F8F8F8;
 
 }
+.horiz {
+  flex-direction: row;
+}
 
 .title-cont {
   display: flex;
@@ -13,10 +16,11 @@
   grid-column-end: 3;
 }
 .title {
-  margin-top: 10px;
+  margin-top: 30px;
   text-align: left;
-  margin-left: 20px;
-  font-size: 40px;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  font-size: 50px;
   color: #e56f56;
   letter-spacing: 1px;
   font-family: 'Modak', cursive;
@@ -50,6 +54,10 @@
 .login-btn:hover {
   opacity: 0.5;
 }
+hr {
+  border-width: 1px;
+  color: #303030;
+}
 
 .login  {
   background: #ECECEC;
@@ -78,4 +86,29 @@
   grid-column-end: 4;
   margin: 30px;
   border-radius: 2px;
+}
+@media only screen and (max-width: 700px) {
+  .grid-container {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto auto;
+  }
+  
+}
+@media only screen and (min-width: 700px) {
+  .grid-container {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto auto auto;
+
+  }
+}
+
+.spacer {
+  margin-top: 0px;
+  border-bottom: 1px dotted #9DA3B2;
+  width: 90vw;
+  margin-left: 40px;
+  margin-right: 40px;
+  align-self: center;
 }

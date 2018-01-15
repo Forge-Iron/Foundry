@@ -1,10 +1,10 @@
 
 
 .icon-image {
-    border-radius: 10%;
-    margin: 20px;
-    max-height: 250px;
-    max-width: 250px;
+    border-radius: 25px;
+    margin: 40px;
+    height: auto;
+    width: 26vw;
     margin-bottom: 0px;
 }
 .icon-image:hover {
@@ -12,9 +12,11 @@
 }
 .icon-text {
     margin-top: 0px;
-    max-width: 250px;
+    max-width: 26vw;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    color: #888E9B;
-    margin-left: 25px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #45484F;
+    margin-left: 40px;
+    text-align: center;
 }
