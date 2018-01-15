@@ -17,7 +17,7 @@ class MainPage extends Component {
     render() {
         return (
             <div className="App">
-                <div className="horiz">
+                <div className="horiz" style={{ 'justify-content': 'space-between' }}>
                     <p className="title"> Foundry </p>
                     <button className="add-button">
                         <p className="btn-text">Add your Repository </p>
@@ -26,6 +26,11 @@ class MainPage extends Component {
 
 
                 <p className="spacer"></p>
+                <div className="horiz">
+                    <p className="sub-bar-text"> View on Github </p>
+                    <p className="sub-bar-text"> Support on Patreon </p>
+                </div>
+
                 <div className="grid-container">
                     <IssueCard name="Gust" description="A charting library for rust" />
                     <IssueCard name="KSUID" description="A KSUID implementation for python" />
