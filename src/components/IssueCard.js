@@ -24,7 +24,11 @@ export default class IssueCard extends Component {
             <div>
 
                 <img className="icon-image" src={pattern.png()} />
+
+
                 <p className="icon-text" >{this.props.name} </p>
+                <p className="description-text">{this.props.description}</p>
+
 
 
             </div>
