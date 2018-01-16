@@ -147,3 +147,20 @@ hr {
   opacity: 0.6;
 }
 
+.footer-text {
+  font-family: 'Poppins', sans-serif;
+  margin-left: 50px;
+  color: #444444;
+  margin: 40px;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 15px;
+}
+
+.text {
+  font-family: 'Poppins', sans-serif;
+  color: #444444;
+  text-align: center;
+  font-size: 35px;
+  align-self: center;
+}

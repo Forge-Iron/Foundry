@@ -21,9 +21,9 @@ export default class IssueCard extends Component {
 
 
         return (
-            <div>
+            <div >
 
-                <img className="icon-image" src={pattern.png()} />
+                < img className="icon-image" src={pattern.png()} />
 
 
                 <p className="icon-text" >{this.props.name} </p>
@@ -31,7 +31,7 @@ export default class IssueCard extends Component {
 
 
 
-            </div>
+            </div >
         )
     }
 }
