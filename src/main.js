@@ -38,10 +38,15 @@ class MainPage extends Component {
                 <RepoBrowser changePage={this.changePage.bind(this)} />
             )
         }
-        else {
+        else if (this.state.curr_page === 'add_repo') {
             return (
-                <AddRepo changePage={this.changePage} />
+                <AddRepo changePage={this.changePage.bind(this)} />
             )
+        }
+        else {
+            <div>
+                <p> Hi there </p>
+            </div>
         }
     }
 

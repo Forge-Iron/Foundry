@@ -20,14 +20,20 @@ class AddRepo extends Component {
     render() {
         var elements = [];
         for (var i = 0; i < 3; i++) {
-            elements.push(<IssueCard name="Gust" description="A charting library for rust" />);
-            elements.push(<IssueCard name="KSUID" description="A KSUID implementation for python" />);
-            elements.push(<IssueCard name="Globe" description="A new way to interact with maps" />);
+            elements.push(<IssueCard changePage={this.props.changePage} link="Hi" name="Gust" description="A charting library for rust" />);
+            elements.push(<IssueCard changePage={this.props.changePage} link="Hi" name="KSUID" description="A KSUID implementation for python" />);
+            elements.push(<IssueCard changePage={this.props.changePage} link="Hi" name="Globe" description="A new way to interact with maps" />);
         }
         return (
             <div className="App">
                 <div className="horiz" style={{ 'justify-content': 'space-between' }}>
                     <p className="title"> Foundry </p>
+                    <button className="add-button"
+                        onClick={() => {
+                            this.props.changePage("repo_browser")
+                        }}>
+                        <p className="btn-text"> Close </p>
+                    </button>
 
 
                 </div>
