@@ -4,6 +4,7 @@ import './App.css';
 import IssueCard from './components/IssueCard';
 import RepoBrowser from './RepoBrowser.js';
 import AddRepo from './AddRepo.js';
+import RepoDetails from './RepoDetails.js';
 
 
 class MainPage extends Component {
@@ -11,7 +12,6 @@ class MainPage extends Component {
     constructor(props) {
         super(props)
         //Has props.code = auth token 
-
         //Save the code to localStorage
         this.state = {
             curr_page: 'repo_browser',
@@ -25,6 +25,12 @@ class MainPage extends Component {
             curr_page: value,
         })
     }
+    changeDynamicPage(value, data) {
+        this.setState({
+            curr_page: value,
+        })
+        localStorage.setItem(data);
+    }
 
     render() {
         var elements = [];
@@ -35,18 +41,22 @@ class MainPage extends Component {
         }
         if (this.state.curr_page === 'repo_browser') {
             return (
-                <RepoBrowser changePage={this.changePage.bind(this)} />
+                <RepoBrowser changePage={this.changePage.bind(this)}
+                    changeDynamicPage={this.changeDynamicPage.bind(this)} />
             )
         }
         else if (this.state.curr_page === 'add_repo') {
             return (
-                <AddRepo changePage={this.changePage.bind(this)} />
+                <AddRepo changePage={this.changePage.bind(this)}
+                    changeDynamicPage={this.changeDynamicPage.bind(this)} />
             )
         }
         else {
-            <div>
-                <p> Hi there </p>
-            </div>
+            return (
+                <RepoDetails changePage={this.changePage.bind(this)}
+                    changeDynamicPage={this.changeDynamicPage.bind(this)} />
+            )
+
         }
     }
 

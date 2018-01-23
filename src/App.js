@@ -22,11 +22,13 @@ class App extends Component {
     var url = new URL(window.location.href);
     var code = url.searchParams.get("code");
     if (code !== null) {
+      localStorage.setItem("token", code);
       this.setState({
         authenticated: true,
         token: code,
       });
     }
+
   }
 
   render() {

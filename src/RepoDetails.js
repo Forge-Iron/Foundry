@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './images/boostfire.png';
 import './App.css';
 import IssueCard from './components/IssueCard';
-
+import IssueDescription from './components/IssueDescription';
 
 
 class AddRepo extends Component {
@@ -16,31 +16,21 @@ class AddRepo extends Component {
 
 
     }
-    componentWillMount() {
-        var url = "https://api.github.com/user/repos?client_id=e6b179a6fb2c1fbdea3d&access_token=" + localStorage.getItem('token');
-        console.log(url);
-        fetch(url).then((response) => {
-            response.json()
-                .then((data) => {
-                    console.log(data);
-                })
-        })
-    }
 
     render() {
-        var elements = [];
-        for (var i = 0; i < 3; i++) {
-            elements.push(<IssueCard changePage={this.props.changePage} link="Hi" name="Gust" description="A charting library for rust" />);
-            elements.push(<IssueCard changePage={this.props.changePage} link="Hi" name="KSUID" description="A KSUID implementation for python" />);
-            elements.push(<IssueCard changePage={this.props.changePage} link="Hi" name="Globe" description="A new way to interact with maps" />);
+
+        var issues = [];
+        for (var i = 0; i < 5; i++) {
+            issues.push(<IssueDescription />);
         }
+
         return (
             <div className="App">
                 <div className="horiz" style={{ 'justify-content': 'space-between' }}>
                     <p className="title"> Foundry </p>
                     <button className="add-button"
                         onClick={() => {
-                            this.props.changePage("repo_browser")
+                            this.props.changePage("add_repo")
                         }}>
                         <p className="btn-text"> Close </p>
                     </button>
@@ -51,11 +41,14 @@ class AddRepo extends Component {
 
                 <p className="spacer"></p>
 
-                <p className="text"> Your Repositories </p>
+                <p className="text"> KSUID </p>
+                <p className="text sub" style={{ marginTop: 0 }}> A KSUID implementation for python </p>
+                <p className="text" style={{ textAlign: 'left' }}> Issues </p>
+
 
 
                 <div className="grid-container">
-                    {elements}
+                    {issues}
                 </div>
                 <p className="spacer"></p>
                 <p className="footer-text"> Development & Design: Samuel Resendez </p>
