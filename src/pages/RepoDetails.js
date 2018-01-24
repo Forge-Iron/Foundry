@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './images/boostfire.png';
-import './App.css';
-import IssueCard from './components/IssueCard';
-import IssueDescription from './components/IssueDescription';
+import logo from '../images/boostfire.png';
+import '../App.css';
+import IssueCard from '../components/IssueCard';
+import IssueDescription from '../components/IssueDescription';
 
 
 class AddRepo extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './images/boostfire.png';
-import './App.css';
+import logo from '../images/boostfire.png';
+import '../App.css';
 
 
 

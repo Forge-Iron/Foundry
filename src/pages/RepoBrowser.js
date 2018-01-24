@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './images/boostfire.png';
-import './App.css';
-import IssueCard from './components/IssueCard';
+
+import '../App.css';
+import IssueCard from '../components/IssueCard';
 
 
 
