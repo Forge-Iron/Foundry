@@ -41,6 +41,9 @@ export default class IssueDescription extends Component {
                 <p className="card-title-text"> Refactor </p>
                 <p className="card-subtitle-text"> Working on making the codebase more readable and easy to access </p>
                 <BarChart data={[["Resources", 5], ["Difficulty", 27], ["People", 27]]} colors={[c1, c2]} />
+                <button className="card-btn">
+                    <p className="btn-txt"> Forge </p>
+                </button>
             </div >
         )
     }

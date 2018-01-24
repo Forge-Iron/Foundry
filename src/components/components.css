@@ -75,9 +75,7 @@
       align-content: center;
       align-items: center;
   }
-  .card:hover {
-      opacity: 0.6;
-  }
+ 
   .card-title-text {
     text-decoration: underline;
     align-self: center;
@@ -104,4 +102,27 @@
     margin-left: 40px;
     margin-right: 40px;
     align-self: center;
+  }
+  .card-btn {
+      background-color: #ffffff;
+      margin: 20px;
+      outline: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 50px;
+      padding-right: 50px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #e56f56;
+      border-radius: 45px;
+  }
+  .card-btn:hover {
+      opacity: 0.6;
+  }
+
+  .btn-txt {
+    text-align: center;
+    color: #e56f56;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
   }
