@@ -168,3 +168,8 @@ hr {
   font-size: 20px;
   color: #898989;
 }
+.grid-2 {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto auto;
+}

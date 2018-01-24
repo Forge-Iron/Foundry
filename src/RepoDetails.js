@@ -43,11 +43,11 @@ class AddRepo extends Component {
 
                 <p className="text"> KSUID </p>
                 <p className="text sub" style={{ marginTop: 0 }}> A KSUID implementation for python </p>
-                <p className="text" style={{ textAlign: 'left' }}> Issues </p>
 
 
 
-                <div className="grid-container">
+
+                <div className="grid-2">
                     {issues}
                 </div>
                 <p className="spacer"></p>

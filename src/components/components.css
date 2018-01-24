@@ -64,22 +64,44 @@
   .card {
     border-width: 1px;
     border-color: #eeeeee;
+    box-shadow: 1px 1px 40px grey;
     border-style: solid;
       margin: 20px;
       background-color: #FFFFFF;
       display: flex;
-      text-align: center;
+      
       border-radius: 2px;
+      flex-direction: column;
       align-content: center;
       align-items: center;
   }
+  .card:hover {
+      opacity: 0.6;
+  }
   .card-title-text {
-     
+    text-decoration: underline;
     align-self: center;
     margin: 20px;
-    margin-top: 30vh;
+    
     text-align: center;
     color: #444444;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
+  }
+  .card-subtitle-text {
+     
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #9DA3B2;
+  }
+
+  .spacer {
+    margin-top: 0px;
+    border-bottom: 1px dotted #9DA3B2;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-self: center;
   }
