@@ -9,6 +9,8 @@
     "react-dom": "^16.2.0",
     "react-hash-avatar": "^0.0.2",
     "react-render-html": "^0.6.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "trianglify": "^1.2.0"
   },

@@ -4,6 +4,14 @@ import './App.css';
 
 import Login from './login.js';
 import MainPage from './main.js';
+import AddRepo from './AddRepo.js';
+import RepoDetails from './RepoDetails.js';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 class App extends Component {
 
@@ -32,16 +40,16 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.authenticated) {
-      return (
-        <Login />
-      )
-    }
-    else {
-      return (
-        <MainPage />
-      );
-    }
+    return (
+      <Router>
+        <div>
+          <Route exact path="/" component={Login} />
+          <Route path="/main" component={MainPage} />
+          <Route path="/add_repo" component={AddRepo} />
+          <Route path="/repo_details/:id" component={RepoDetails} />
+        </div>
+      </Router>
+    )
   }
 }
 

@@ -38,12 +38,9 @@ class AddRepo extends Component {
             <div className="App">
                 <div className="horiz" style={{ 'justify-content': 'space-between' }}>
                     <p className="title"> Foundry </p>
-                    <button className="add-button"
-                        onClick={() => {
-                            this.props.changePage("repo_browser")
-                        }}>
-                        <p className="btn-text"> Close </p>
-                    </button>
+
+                    <a className="add-link" href="/main"><p className="btn-text"> Close </p></a>
+
 
 
                 </div>

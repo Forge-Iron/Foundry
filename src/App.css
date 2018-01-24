@@ -40,6 +40,13 @@ a:link {
   color: #303030;
   font-family: 'Lato', sans-serif;
 }
+.add-link {
+  margin-right: 50px;
+  margin-top: 40px;
+}
+.add-link:hover {
+  opacity: 0.6;
+}
 .paragraph {
   max-width: 50vw;
   font-family: 'Lato', sans-serif;
@@ -132,6 +139,7 @@ hr {
   opacity: 0.5;
 }
 .btn-text {
+  text-align: center;
   vertical-align: middle;
   font-family: 'Lato', sans-serif;
   font-size: 17px;
@@ -172,4 +180,20 @@ hr {
     display: grid;
     padding: 10px;
     grid-template-columns: auto auto;
+}
+
+
+.search {
+  margin: 60px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  outline: 0px;
+  border-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #303030;
+  background-color: #F8F8F8;  
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
 }

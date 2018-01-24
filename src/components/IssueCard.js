@@ -7,7 +7,7 @@ import reactHashAvatar from 'react-hash-avatar'
 
 
 
-export default class IssueCard extends Component {
+export default class RepoCard extends Component {
     constructor(props) {
         super(props)
 
@@ -34,7 +34,6 @@ export default class IssueCard extends Component {
             <div >
 
                 < img
-                    onClick={() => { this.props.changePage(this.props.link) }}
                     className="icon-image" src={this.state.pattern.png()} />
 
 

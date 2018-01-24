@@ -3,8 +3,7 @@ import logo from './images/boostfire.png';
 import './App.css';
 import IssueCard from './components/IssueCard';
 import RepoBrowser from './RepoBrowser.js';
-import AddRepo from './AddRepo.js';
-import RepoDetails from './RepoDetails.js';
+
 
 
 class MainPage extends Component {
@@ -33,31 +32,10 @@ class MainPage extends Component {
     }
 
     render() {
-        var elements = [];
-        for (var i = 0; i < 3; i++) {
-            elements.push(<IssueCard name="Gust" description="A charting library for rust" />);
-            elements.push(<IssueCard name="KSUID" description="A KSUID implementation for python" />);
-            elements.push(<IssueCard name="Globe" description="A new way to interact with maps" />);
-        }
-        if (this.state.curr_page === 'repo_browser') {
-            return (
-                <RepoBrowser changePage={this.changePage.bind(this)}
-                    changeDynamicPage={this.changeDynamicPage.bind(this)} />
-            )
-        }
-        else if (this.state.curr_page === 'add_repo') {
-            return (
-                <AddRepo changePage={this.changePage.bind(this)}
-                    changeDynamicPage={this.changeDynamicPage.bind(this)} />
-            )
-        }
-        else {
-            return (
-                <RepoDetails changePage={this.changePage.bind(this)}
-                    changeDynamicPage={this.changeDynamicPage.bind(this)} />
-            )
 
-        }
+        return (
+            <RepoBrowser />
+        )
     }
 
 
