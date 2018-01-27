@@ -3,7 +3,9 @@
 import React, { Component } from 'react';
 import './components.css';
 import reactHashAvatar from 'react-hash-avatar'
+import { LineChart } from 'react-chartkick';
 
+import gradient from 'random-gradient'
 
 
 
@@ -16,13 +18,16 @@ export default class RepoCard extends Component {
         }
 
     }
-    componentWillMount() {
-        var Trianglify = require('trianglify');
 
-        var pattern = Trianglify({ cell_size: 60, width: 1000, height: 900 })
-        this.setState({
-            pattern: pattern
-        })
+    getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var colors = ["#7286A0", "#EE6055", "#5296A5", "#A1CDA8", "#FE5F55", "#8BE8CB"]
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return colors[Math.floor(Math.random() * colors.length)];
+
     }
 
     render() {
@@ -30,12 +35,14 @@ export default class RepoCard extends Component {
 
 
 
+        var Trianglify = require('trianglify');
+        var pattern = Trianglify({ cell_size: 30, width: 1000, height: 900 })
+
+
         return (
-            <div >
+            <div>
 
-                < img
-                    className="icon-image" src={this.state.pattern.png()} />
-
+                <img className="icon-image" src={pattern.png()} />
 
 
                 <p className="icon-text" >{this.props.name} </p>
@@ -43,7 +50,7 @@ export default class RepoCard extends Component {
 
 
 
-            </div >
+            </div>
         )
     }
 }

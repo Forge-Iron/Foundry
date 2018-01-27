@@ -6,6 +6,7 @@ import Login from './pages/login.js';
 import MainPage from './pages/main.js';
 import AddRepo from './pages/AddRepo.js';
 import RepoDetails from './pages/RepoDetails.js';
+import RepoSubmit from './pages/repo_submit.js';
 
 import {
   BrowserRouter as Router,
@@ -47,6 +48,7 @@ class App extends Component {
           <Route path="/main" component={MainPage} />
           <Route path="/add_repo" component={AddRepo} />
           <Route path="/repo_details/:id" component={RepoDetails} />
+          <Route path="/repo_submit/:id" component={RepoSubmit} />
         </div>
       </Router>
     )

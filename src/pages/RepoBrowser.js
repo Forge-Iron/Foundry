@@ -20,9 +20,9 @@ class RepoBrowser extends Component {
     componentWillMount() {
         for (var i = 0; i < 3; i++) {
             var elements = this.state.elements;
-            elements.push(<a href="/repo_details/1ef3232f"><IssueCard name="Gust" description="A charting library for rust" /></a>);
-            elements.push(<a href="/repo_details/1ef3232f"><IssueCard name="KSUID" description="A KSUID implementation for python" /></a>);
-            elements.push(<a href="/repo_details/1ef3232f"><IssueCard name="Globe" description="A new way to interact with maps" /></a>);
+            elements.push({ href: "/repo_details/13asdf3f", name: "Gust", description: "A partial vega implementation for Rust" });
+            elements.push({ href: "/repo_details/13asdf3f", name: "KSUID", description: "K-Sortable UIDs for Python" });
+            elements.push({ href: "/repo_details/13asdf3f", name: "Fae", description: "A modern CLI Benchmarking Tool" });
             this.setState({
                 elements: elements,
             })
@@ -31,7 +31,8 @@ class RepoBrowser extends Component {
 
     render() {
 
-
+        var elements = this.state.elements.map((x) => { return <a href={x.href}><IssueCard name={x.name} description={x.description} /></a> })
+        console.log("Elements Length: " + elements[0]);
         return (
             <div className="App">
                 <div className="horiz" style={{ 'justify-content': 'space-between' }}>
@@ -48,10 +49,11 @@ class RepoBrowser extends Component {
                     <a href="https://github.com/Forge-Iron/Foundry"><p className="sub-bar-text"> View on Github </p></a>
                     <a href="https://www.patreon.com/home" ><p className="sub-bar-text"> Support on Patreon </p> </a>
                 </div >
-                <input className="search" type="text" placeholder="Search for Repository" />
+                <input className="search" type="text" placeholder="Search for Repository"
+                    onChange={(val) => { console.log(val.target.value) }} />
 
-                <div className="grid-container">
-                    {this.state.elements}
+                <div className="grid-1">
+                    {elements}
                 </div>
                 <p className="spacer"></p>
                 <p className="footer-text"> Development & Design: Samuel Resendez </p>

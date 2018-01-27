@@ -11,13 +11,13 @@
     opacity: 0.6;
 }
 .icon-text {
-    margin-top: 0px;
-    max-width: 26vw;
+    margin-top: 30px;
+   
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     letter-spacing: 2px;
     color: #45484F;
-    margin-left: 40px;
+    
     margin-bottom: 5px;
     text-align: center;
 }
@@ -31,6 +31,17 @@
     position: relative; 
     
   }
+  .issue-card-cont {
+    align-items: center;
+    max-width: 25vw;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    margin: 10px;
+    border-color: #9DA3B2;
+    box-shadow: 1px 1px 15px grey;
+
+}
   
   .img-text {
     position: absolute; 
@@ -126,3 +137,8 @@
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
   }
+  .color-top {
+      height: 80px;
+      
+  }
+ 

@@ -177,9 +177,23 @@ hr {
   color: #898989;
 }
 .grid-2 {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: auto auto;
+}
+.grid-1 {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: auto auto auto;
+
+}
+@media only screen and (max-width: 700px) {
+  .grid-1 {
     display: grid;
     padding: 10px;
     grid-template-columns: auto auto;
+  
+  }
 }
 
 
