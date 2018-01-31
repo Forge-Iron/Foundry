@@ -21,9 +21,9 @@ class RepoBrowser extends Component {
     componentWillMount() {
         for (var i = 0; i < 3; i++) {
             var elements = this.state.elements;
-            elements.push({ href: "/repo_details/13asdf3f", name: "Gust", description: "A partial vega implementation for Rust" });
-            elements.push({ href: "/repo_details/13asdf3f", name: "KSUID", description: "K-Sortable UIDs for Python" });
-            elements.push({ href: "/repo_details/13asdf3f", name: "Fae", description: "A modern CLI Benchmarking Tool" });
+            elements.push({ href: "/repo_details/13asdf3f", name: "Gust", description: "A partial vega implementation for Rust", color: "#dea584" });
+            elements.push({ href: "/repo_details/13asdf3f", name: "KSUID", description: "K-Sortable UIDs for Python", color: "#3572A5" });
+            elements.push({ href: "/repo_details/13asdf3f", name: "Fae", description: "A modern CLI Benchmarking Tool", color: "#dea584" });
             this.setState({
                 elements: elements,
             })
@@ -34,7 +34,7 @@ class RepoBrowser extends Component {
 
         var elements = this.state.elements
             .filter((y) => { return (y.href.includes(this.state.search_term) | y.name.includes(this.state.search_term) | y.description.includes(this.state.search_term)) })
-            .map((x) => { return <a href={x.href}><IssueCard name={x.name} description={x.description} /></a> })
+            .map((x) => { return <a href={x.href}><IssueCard name={x.name} color={x.color} description={x.description} /></a> })
         console.log("Elements Length: " + elements[0]);
 
         return (

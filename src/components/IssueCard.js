@@ -44,7 +44,7 @@ export default class RepoCard extends Component {
 
 
 
-                <p className="icon-text" >{this.props.name} </p>
+                <p className="icon-text" style={{ color: this.props.color }} >{this.props.name} </p>
                 <p className="description-text">{this.props.description}</p>
 
 

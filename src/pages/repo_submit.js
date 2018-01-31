@@ -38,9 +38,10 @@ export default class RepoSubmit extends Component {
                 <p className="spacer"> </p>
                 <p className="text" style={{ fontSize: 40, marginBottom: 5 }}> Gust </p>
 
+                <p className="text sub"> Foundry will select all issues from your repository tagged "help wanted", and add them here. </p>
+                <p className="text sub"> You can then add resources and show that mentorship is available for various issues </p>
 
-
-
+                <p className="text" > Issues </p>
                 {/* HERE IS THE DIFFICULTY CAROUSEL
                 <div style={{ width: '50vw', alignItems: 'center', alignSelf: 'center' }}>
                     <Slider style={{ width: '50vw', marginBottom: 100 }}{...settings}>
