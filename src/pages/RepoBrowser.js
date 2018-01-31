@@ -50,7 +50,9 @@ class RepoBrowser extends Component {
                     <a href="https://www.patreon.com/home" ><p className="sub-bar-text"> Support on Patreon </p> </a>
                 </div >
                 <input className="search" type="text" placeholder="Search for Repository"
-                    onChange={(val) => { console.log(val.target.value) }} />
+                    onChange={(val) => {
+                        console.log(val.target.value)
+                    }} />
 
                 <div className="grid-1">
                     {elements}
