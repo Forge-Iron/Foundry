@@ -35,14 +35,13 @@ export default class RepoCard extends Component {
 
 
 
-        var Trianglify = require('trianglify');
-        var pattern = Trianglify({ cell_size: 30, width: 1000, height: 900 })
+
 
 
         return (
-            <div>
+            <div className="card">
 
-                <img className="icon-image" src={pattern.png()} />
+
 
 
                 <p className="icon-text" >{this.props.name} </p>

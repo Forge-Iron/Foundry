@@ -19,18 +19,6 @@ class MainPage extends Component {
 
     }
 
-    changePage(value) {
-        this.setState({
-            curr_page: value,
-        })
-    }
-    changeDynamicPage(value, data) {
-        this.setState({
-            curr_page: value,
-        })
-        localStorage.setItem(data);
-    }
-
     render() {
 
         return (

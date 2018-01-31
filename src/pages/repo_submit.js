@@ -37,15 +37,17 @@ export default class RepoSubmit extends Component {
                 </div>
                 <p className="spacer"> </p>
                 <p className="text" style={{ fontSize: 40, marginBottom: 5 }}> Gust </p>
-                <p className="text sub" style={{ marginTop: 10 }}> A small graphing library for rust, built with d3.js </p>
 
 
-                <p className="text sub" > Difficulty </p>
+
+
+                {/* HERE IS THE DIFFICULTY CAROUSEL
                 <div style={{ width: '50vw', alignItems: 'center', alignSelf: 'center' }}>
                     <Slider style={{ width: '50vw', marginBottom: 100 }}{...settings}>
                         {elements}
                     </Slider>
                 </div>
+                */}
 
             </div>
         )

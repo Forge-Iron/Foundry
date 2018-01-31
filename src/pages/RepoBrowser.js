@@ -13,7 +13,8 @@ class RepoBrowser extends Component {
 
         //Save the code to localStorage
         this.state = {
-            elements: []
+            elements: [],
+            search_term: "",
         }
 
     }
@@ -31,8 +32,11 @@ class RepoBrowser extends Component {
 
     render() {
 
-        var elements = this.state.elements.map((x) => { return <a href={x.href}><IssueCard name={x.name} description={x.description} /></a> })
+        var elements = this.state.elements
+            .filter((y) => { return (y.href.includes(this.state.search_term) | y.name.includes(this.state.search_term) | y.description.includes(this.state.search_term)) })
+            .map((x) => { return <a href={x.href}><IssueCard name={x.name} description={x.description} /></a> })
         console.log("Elements Length: " + elements[0]);
+
         return (
             <div className="App">
                 <div className="horiz" style={{ 'justify-content': 'space-between' }}>
@@ -52,11 +56,15 @@ class RepoBrowser extends Component {
                 <input className="search" type="text" placeholder="Search for Repository"
                     onChange={(val) => {
                         console.log(val.target.value)
+                        this.setState({ search_term: val.target.value })
                     }} />
 
                 <div className="grid-1">
                     {elements}
                 </div>
+                {elements.length === 0 && <p style={{ margin: 100 }} className="text"> Can't find the repository you're looking for?
+                Ask the author to add their repo to Foundry! </p>}
+
                 <p className="spacer"></p>
                 <p className="footer-text"> Development & Design: Samuel Resendez </p>
             </div >
