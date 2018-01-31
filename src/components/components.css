@@ -10,6 +10,9 @@
 .icon-image:hover {
     opacity: 0.6;
 }
+.h:hover {
+    opacity: 0.6;
+}
 .icon-text {
     margin-top: 30px;
    

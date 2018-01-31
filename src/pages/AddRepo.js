@@ -30,9 +30,9 @@ class AddRepo extends Component {
     render() {
         var elements = [];
         for (var i = 0; i < 3; i++) {
-            elements.push(<a href="/repo_submit/a12sf2"><IssueCard changePage={this.props.changePage} link="Hi" name="Gust" description="A charting library for rust" /></a>);
-            elements.push(<a href="/repo_submit/a12sf2"><IssueCard changePage={this.props.changePage} link="Hi" name="KSUID" description="A KSUID implementation for python" /></a>);
-            elements.push(<a href="/repo_submit/a12sf2"><IssueCard changePage={this.props.changePage} link="Hi" name="Globe" description="A new way to interact with maps" /></a>);
+            elements.push(<a href="/repo_submit/a12sf2"><IssueCard color="#00131d" name="Gust" description="A charting library for rust" /></a>);
+            elements.push(<a href="/repo_submit/a12sf2"><IssueCard color="#FF0000" name="KSUID" description="A KSUID implementation for python" /></a>);
+            elements.push(<a href="/repo_submit/a12sf2"><IssueCard color="#00FF00" name="Globe" description="A new way to interact with maps" /></a>);
         }
         return (
             <div className="App">

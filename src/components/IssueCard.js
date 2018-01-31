@@ -2,10 +2,10 @@
 
 import React, { Component } from 'react';
 import './components.css';
-import reactHashAvatar from 'react-hash-avatar'
+
 import { LineChart } from 'react-chartkick';
 
-import gradient from 'random-gradient'
+
 
 
 
@@ -40,15 +40,8 @@ export default class RepoCard extends Component {
 
         return (
             <div className="card">
-
-
-
-
                 <p className="icon-text" style={{ color: this.props.color }} >{this.props.name} </p>
                 <p className="description-text">{this.props.description}</p>
-
-
-
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './components.css';
-import reactHashAvatar from 'react-hash-avatar'
+
 
 import { BarChart } from 'react-chartkick';
 

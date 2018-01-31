@@ -33,7 +33,7 @@ class RepoBrowser extends Component {
     render() {
 
         var elements = this.state.elements
-            .filter((y) => { return (y.href.includes(this.state.search_term) | y.name.includes(this.state.search_term) | y.description.includes(this.state.search_term)) })
+            .filter((y) => { return (y.name.includes(this.state.search_term) | y.description.includes(this.state.search_term)) })
             .map((x) => { return <a href={x.href}><IssueCard name={x.name} color={x.color} description={x.description} /></a> })
         console.log("Elements Length: " + elements[0]);
 

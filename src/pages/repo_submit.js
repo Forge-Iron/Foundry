@@ -5,6 +5,7 @@ import IssueCard from '../components/IssueCard';
 import IssueDescription from '../components/IssueDescription';
 import DiffElement from '../components/DiffCarouselEl';
 import Slider from 'react-slick';
+import AddIssueCard from '../components/AddIssueCard';
 
 
 export default class RepoSubmit extends Component {
@@ -18,6 +19,7 @@ export default class RepoSubmit extends Component {
 
             slidesToScroll: 1
         };
+        /* Difficulty Related
         var texts = [
             { diff: "Easy", col: "#7fc6a4" },
             { diff: "Medium", col: "#edae49" },
@@ -26,6 +28,12 @@ export default class RepoSubmit extends Component {
         var elements = []
         for (var i = 0; i < 4; i++) {
             elements.push(<div><DiffElement diff={texts[i].diff} color={texts[i].col} /></div>);
+        }
+        */
+
+        var elements = [];
+        for (var i = 0; i < 5; i++) {
+            elements.push(<AddIssueCard />);
         }
         return (
             <div className="App">
@@ -49,6 +57,9 @@ export default class RepoSubmit extends Component {
                     </Slider>
                 </div>
                 */}
+                <div className="grid-2">
+                    {elements}
+                </div>
 
             </div>
         )
